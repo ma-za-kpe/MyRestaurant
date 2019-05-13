@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         ButterKnife.bind(this);
         Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/Amatic-Bold.ttf");
 
+        mFindRestaurantsButton.setOnClickListener(this);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
             String location = mLocationEditText.getText().toString();
             Log.d(TAG, location);
-            Toast.makeText(MainActivity.this, location, Toast.LENGTH_LONG).show();
             Intent intent = new Intent(MainActivity.this, RestaurantActivity.class);
             intent.putExtra("location", location);
             startActivity(intent);
