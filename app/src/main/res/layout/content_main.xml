@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myRestaurantsTextView"
+        app:srcCompat="@drawable/background" />
+
+
+    <TextView
+        android:id="@+id/myRestaurantsTextView"
+        android:layout_width="367dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="MyRestaurants"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="MyRestaurants" />
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="331dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter zip code"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/myRestaurantsTextView"
+        app:layout_constraintStart_toStartOf="@+id/myRestaurantsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/myRestaurantsTextView" />
+
+    <Button
+        android:id="@+id/findRestaurantsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Find Restaurants"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="@+id/locationEditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/locationEditText"
+        app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
+
+
+</android.support.constraint.ConstraintLayout>
